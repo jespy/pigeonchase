@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Pigeon Chase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="game-wrap">
+      <header class="game-header">
+        <div>
+          <h1>Pigeon Chase</h1>
+          <p>Help Mateo catch the pigeons before time runs out!</p>
+        </div>
+
+        <div class="hud" aria-label="Game statistics">
+          <div class="hud-card">
+            <span class="hud-label">Caught</span>
+            <strong><span id="caughtCount">0</span>/<span id="targetCount">10</span></strong>
+          </div>
+          <div class="hud-card">
+            <span class="hud-label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="hud-card">
+            <span class="hud-label">Time</span>
+            <strong id="timer">60</strong>
+          </div>
+        </div>
+      </header>
+
+      <div id="game" class="game" role="application" aria-label="Pigeon Chase game area">
+        <div class="sky-decor sun"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+
+        <div class="buildings" aria-hidden="true">
+          <div class="building building-a">
+            <div class="window"></div><div class="window"></div>
+            <div class="awning"></div>
+          </div>
+          <div class="building building-b">
+            <div class="balcony"></div>
+            <div class="window"></div><div class="window"></div>
+          </div>
+          <div class="building building-c">
+            <div class="window"></div><div class="window"></div>
+            <div class="door"></div>
+          </div>
+        </div>
+
+        <div class="palm" aria-hidden="true">
+          <div class="palm-leaves">✦</div>
+          <div class="palm-trunk"></div>
+        </div>
+
+        <div class="street-prop bench" aria-hidden="true"></div>
+        <div class="street-prop crate" aria-hidden="true"></div>
+
+        <div id="player" class="player" aria-label="Mateo">
+          <div class="player-shadow"></div>
+          <div class="boy">
+            <div class="hair"></div>
+            <div class="head">
+              <div class="ear"></div>
+              <div class="eye"></div>
+              <div class="smile"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="shirt"></div>
+            <div class="shorts"></div>
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+            <div class="leg leg-left"></div>
+            <div class="leg leg-right"></div>
+          </div>
+          <div class="catch-ring"></div>
+        </div>
+
+        <div id="message" class="floating-message" aria-live="polite"></div>
+
+        <div id="startScreen" class="overlay">
+          <div class="panel">
+            <div class="panel-icon">🐦</div>
+            <h2>Ready to play?</h2>
+            <p>Move close to a pigeon and press <strong>Catch</strong> before it flies away.</p>
+            <div class="instructions">
+              <span>Move: ← → or A D</span>
+              <span>Jump: Space</span>
+              <span>Catch: E or Enter</span>
+            </div>
+            <button id="startButton" class="primary-button">Start Game</button>
+          </div>
+        </div>
+
+        <div id="endScreen" class="overlay hidden">
+          <div class="panel">
+            <div id="endIcon" class="panel-icon">🎉</div>
+            <h2 id="endTitle">Great job!</h2>
+            <p id="endMessage">You caught all the pigeons.</p>
+            <p class="final-score">Final score: <strong id="finalScore">0</strong></p>
+            <button id="restartButton" class="primary-button">Play Again</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-controls" aria-label="Touch controls">
+        <div class="direction-controls">
+          <button id="leftButton" class="control-button" aria-label="Move left">◀</button>
+          <button id="rightButton" class="control-button" aria-label="Move right">▶</button>
+        </div>
+        <div class="action-controls">
+          <button id="jumpButton" class="control-button jump-button">Jump</button>
+          <button id="catchButton" class="control-button catch-button">Catch</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
