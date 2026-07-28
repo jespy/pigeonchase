@@ -1,15 +1,11 @@
-PIGEON CHASE
+PIGEON CHASE — TRAVELING CAMERA VERSION
 
-How to play:
-1. Open index.html in a web browser.
-2. Move with Left/Right arrows or A/D.
-3. Jump with Space, Up Arrow, or W.
-4. Catch with E or Enter.
-5. Mobile touch controls are included.
+Open index.html in Chrome, Edge, Firefox, or Safari.
 
-Files:
-- index.html
-- style.css
-- game.js
+Controls:
+- Move: A/D or arrow keys
+- Jump: Space, W, or Up
+- Catch: E or Enter
+- Mobile controls are included
 
-No external images or libraries are required.
+This version uses a world three screen-widths long. The camera follows Little Alvaro and keeps him around one-third from the left side.
